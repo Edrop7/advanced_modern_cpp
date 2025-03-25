@@ -13,3 +13,6 @@ include_directories(
 
 add_executable(robot_position_as_array src/robot_position_as_array.cpp)
 target_link_libraries(robot_position_as_array ${catkin_LIBRARIES})
+
+add_executable(robot_heading_as_vector src/robot_heading_as_vector.cpp)
+target_link_libraries(robot_heading_as_vector ${catkin_LIBRARIES})
