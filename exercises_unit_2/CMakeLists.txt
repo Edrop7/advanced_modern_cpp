@@ -19,3 +19,6 @@ target_link_libraries(robot_heading_as_vector ${catkin_LIBRARIES})
 
 add_executable(robot_heading_as_deque src/robot_heading_as_deque.cpp)
 target_link_libraries(robot_heading_as_deque ${catkin_LIBRARIES})
+
+add_executable(lists src/lists.cpp)
+target_link_libraries(lists ${catkin_LIBRARIES})
