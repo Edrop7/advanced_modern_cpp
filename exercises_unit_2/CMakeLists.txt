@@ -22,3 +22,5 @@ target_link_libraries(robot_heading_as_deque ${catkin_LIBRARIES})
 
 add_executable(lists src/lists.cpp)
 target_link_libraries(lists ${catkin_LIBRARIES})
+add_executable(path_coordinates src/path_coordinates.cpp)
+target_link_libraries(path_coordinates ${catkin_LIBRARIES})
