@@ -1,9 +1,10 @@
 #include "../include/robot_manager.h"
+#include <ros/ros.h>
 
 int main(int argc, char **argv) {
   ros::init(argc, argv, "robot_manager");
-  RobotManager turtlebot;
-  turtlebot.robot_name = "my_robot";
-  turtlebot.robot_model = "TurtleBot3";
+  ros::NodeHandle nh;
+  RobotManager turtlebot = RobotManager(&nh, "/robot1/odom", "my_robot", "turtlebot");
   turtlebot.print_specifications();
+  ros::spin();
 }

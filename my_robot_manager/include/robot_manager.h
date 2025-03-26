@@ -1,12 +1,19 @@
 #pragma once
 #include <ros/ros.h>
+#include "nav_msgs/Odometry.h"
 
 class RobotManager {
-public:
+private:
   std::string robot_name;
   std::string robot_model;
   float battery_capacity_kwh = 2;
   int total_operation_hours = 100;
+  std::string odom_topic;
+  ros::Subscriber odom_subscriber;
 
+public:
+  RobotManager(ros::NodeHandle *nh, std::string topic, std::string name,
+               std::string model);
   void print_specifications();
+  void odom_callback(const nav_msgs::Odometry::ConstPtr &msg);
 };
