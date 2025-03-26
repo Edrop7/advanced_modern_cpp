@@ -6,13 +6,13 @@ class RobotManager {
 private:
   std::string robot_name;
   std::string robot_model;
-  float battery_capacity_kwh = 2;
-  int total_operation_hours = 100;
+  const float battery_capacity_kwh = 2;
+  const int total_operation_hours = 100;
   std::string odom_topic;
   ros::Subscriber odom_subscriber;
 
 public:
-    static int robot_count;
+  static int robot_count;
 
   RobotManager(ros::NodeHandle *nh, std::string topic, std::string name,
                std::string model);
