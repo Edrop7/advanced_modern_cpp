@@ -2,11 +2,16 @@
 #include <string>
 #include "../include/robot_manager.h"
 
+int RobotManager::robot_count = 0;
+
 RobotManager::RobotManager(ros::NodeHandle *nh, std::string topic, std::string name, std::string model) {
   odom_topic = topic;
   robot_name = name;
   robot_model = model;
   odom_subscriber = nh->subscribe(odom_topic, 1000, &RobotManager::odom_callback, this);
+
+    robot_count++;
+    ROS_INFO("Created Robot #%d", robot_count);
 }
 
 void RobotManager::odom_callback(const nav_msgs::Odometry::ConstPtr &msg) {

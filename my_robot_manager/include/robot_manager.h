@@ -12,6 +12,8 @@ private:
   ros::Subscriber odom_subscriber;
 
 public:
+    static int robot_count;
+
   RobotManager(ros::NodeHandle *nh, std::string topic, std::string name,
                std::string model);
   void print_specifications();
