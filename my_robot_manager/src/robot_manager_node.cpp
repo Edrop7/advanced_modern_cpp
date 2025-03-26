@@ -14,11 +14,11 @@ int main(int argc, char **argv) {
 
   std::cout << std::endl << std::endl;
 
-  RobotManager turtlebot2 =
-      RobotManager(&nh, "/robot2/odom", "my_second_robot", "turtlebot");
-  turtlebot2.print_specifications();
+//   RobotManager turtlebot2 =
+//       RobotManager(&nh, "/robot2/odom", "my_second_robot", "turtlebot");
+//   turtlebot2.print_specifications();
 
-  std::cout << std::endl << std::endl;
+//   std::cout << std::endl << std::endl;
 
   ros::spin();
 }

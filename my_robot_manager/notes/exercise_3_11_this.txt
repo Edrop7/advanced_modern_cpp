@@ -1,0 +1,5 @@
+We turned the node into a server
+
+Commands to run:
+T1:   rosrun my_robot_manager robot_manager_node
+T2:   rosservice call /my_robot/log_current_position "{}"

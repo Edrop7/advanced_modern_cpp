@@ -57,6 +57,9 @@
   <build_export_depend>nav_msgs</build_export_depend>
   <exec_depend>nav_msgs</exec_depend>
 
+   <!--serves the same purpose as the 3 tags above-->
+  <depend>std_srvs</depend>
+
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
