@@ -28,9 +28,11 @@ target_link_libraries(${PROJECT_NAME}
 ${catkin_LIBRARIES}
 )
 
+# executable removed due to presence of virtual function
+
 # Add standalone executable file
-add_executable(robot_manager_base_class_test_node src/base_robot_manager_node.cpp src/base_robot_manager.cpp)
-target_link_libraries(robot_manager_base_class_test_node ${catkin_LIBRARIES} ${PROJECT_NAME})
+# add_executable(robot_manager_base_class_test_node src/base_robot_manager_node.cpp src/base_robot_manager.cpp)
+# target_link_libraries(robot_manager_base_class_test_node ${catkin_LIBRARIES} ${PROJECT_NAME})
 
 # add new standalone executable file
 add_executable(mobile_robot_robot_manager_node src/mobile_robot_robot_manager_node.cpp src/mobile_robot_robot_manager.cpp src/base_robot_manager.cpp)

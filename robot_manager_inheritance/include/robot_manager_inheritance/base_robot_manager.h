@@ -12,7 +12,7 @@ protected:
   ros::NodeHandle *nh;
   void init_config_output_srv();
   bool output_enabled = false;
-  virtual void displayRobotDetails();
+  virtual void displayRobotDetails() = 0; // = 0 makes it a pure virtual
   std::string robot_name = "Waste Allocation Load Lifter Earth-Class";
   std::string robot_location = "Emeryville, California";
 
